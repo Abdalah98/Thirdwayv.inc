@@ -11,9 +11,6 @@ class ProductListViewModel  {
     
     //MARK: - Properties
     
-    private var isStartingApp = true
-    private var isDataFromCaching = false
-    
     var fileManager: ProductFileManager?
 
     /// i  do  ApiServiceProtocol  to Dependency Injection
@@ -22,8 +19,15 @@ class ProductListViewModel  {
     
     
     /// product is array of DataSource to append data it
-    private  var product = [Product]()
+    private  var product = [Product](){
+        didSet{
+        self.startCaching()
+            self.reloadCollectionViewClouser?()
+
+          }
+    }
     
+  
     
     /// The cellViewModel in which I put the data  i get it from json and put in cell when data isready it call reloadCollectionViewClouser
     private var cellViewModel : [PorductCellViewModel] = [PorductCellViewModel](){
@@ -45,9 +49,16 @@ class ProductListViewModel  {
     init(apiService : ApiServiceProtocol = ApiService()) {
         self.apiService = apiService
         fileManager = ProductFileManager()
+        NotificationCenter.default.addObserver(self,selector: #selector(statusManager),name: .flagsChanged,object: nil)
 
     }
+ 
     
+    /// Update User Interface if has connection or not has connection networking
+    /// - Parameter notification: notification center
+    @objc func statusManager(_ notification: Notification) {
+            updateUserInterface()
+    }
     
     /// return number count of cell
     var numberOfCell :Int {
@@ -141,9 +152,6 @@ class ProductListViewModel  {
         for product in products {
             vms.append( createCellViewModel(product: product) )
         }
-        if !self.isDataFromCaching{
-        self.startCaching()
-        }
         self.cellViewModel.append(contentsOf: vms)
     }
     
@@ -163,6 +171,7 @@ class ProductListViewModel  {
             case .failure(let error):
                 self.state = .error
                 self.alertMessage = error.rawValue
+
             }
         }
     }
@@ -183,29 +192,14 @@ class ProductListViewModel  {
     // case wwan that mean via a cellular connection
     // case wwan that mean via a wifi connection
     
-    private var connectionState: Bool? {
-        didSet{
-            self.updateUserInterface()
-        }
-    }
+   
     
     func updateUserInterface() {
         
         switch Network.reachability.status {
         case .unreachable:
-            if connectionState! {
-                isDataFromCaching = false
-                initFetchProductData()
-                isStartingApp = false
-                
-                
-            }else{
-                isDataFromCaching = true
-                if isStartingApp == true{
-                    
-                    getCachedData()
-                }
-            }
+            getCachedData()
+            initFetchProductData()
         case .wwan:
             initFetchProductData()
         case .wifi:
@@ -214,18 +208,15 @@ class ProductListViewModel  {
     }
     
     
-    func getDataStatus() -> Bool{
-        return isDataFromCaching
-    }
     
     func startCaching(){
         
-        print("Start")
         fileManager?.cacheProducts(with: product )
+        
     }
     
     func getCachedData(){
-        print("get")
+
         product = fileManager?.readCachedProducts() ?? []
         
     }

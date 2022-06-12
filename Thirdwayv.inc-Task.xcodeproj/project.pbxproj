@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D107A0E2855989B0067874C /* filemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D107A0D2855989B0067874C /* filemanager.swift */; };
+		5D65EFE22855C95E0064E047 /* ProductFileManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65EFE12855C95E0064E047 /* ProductFileManger.swift */; };
 		5D93281B2853E525005D5509 /* ProductDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D93281A2853E525005D5509 /* ProductDetails.storyboard */; };
 		5DC60C3E2854426100EABDB2 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC60C3D2854426100EABDB2 /* PinterestLayout.swift */; };
 		5DE73F4B285313C300D41C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE73F4A285313C300D41C5A /* AppDelegate.swift */; };
@@ -61,7 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D107A0D2855989B0067874C /* filemanager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = filemanager.swift; path = "../../../Downloads/New Folder With Items/New Folder With Items/Thirdwayv-main/Thirdwayv/PersistentService/filemanager.swift"; sourceTree = "<group>"; };
+		5D65EFE12855C95E0064E047 /* ProductFileManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFileManger.swift; sourceTree = "<group>"; };
 		5D93281A2853E525005D5509 /* ProductDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetails.storyboard; sourceTree = "<group>"; };
 		5DC60C3D2854426100EABDB2 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		5DE73F47285313C300D41C5A /* Thirdwayv.inc-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thirdwayv.inc-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D65EFDE2855C92A0064E047 /* ProductFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				5D65EFE12855C95E0064E047 /* ProductFileManger.swift */,
+			);
+			name = ProductFileManager;
+			sourceTree = "<group>";
+		};
 		5DC60C3C2854424600EABDB2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +164,7 @@
 		5DE73F49285313C300D41C5A /* Thirdwayv.inc-Task */ = {
 			isa = PBXGroup;
 			children = (
-				5D107A0D2855989B0067874C /* filemanager.swift */,
+				5D65EFDE2855C92A0064E047 /* ProductFileManager */,
 				5DE73F7D2853141300D41C5A /* Delegate */,
 				5DE73F88285314AA00D41C5A /* ApiSevice */,
 				5DE73F9C2853155B00D41C5A /* Scenes */,
@@ -461,6 +469,7 @@
 				5DE73F852853147D00D41C5A /* Constant.swift in Sources */,
 				5DC60C3E2854426100EABDB2 /* PinterestLayout.swift in Sources */,
 				5DE73F842853147D00D41C5A /* Reachability.swift in Sources */,
+				5D65EFE22855C95E0064E047 /* ProductFileManger.swift in Sources */,
 				5DE73F992853150A00D41C5A /* DownlaodImage+Ext.swift in Sources */,
 				5DE73F4B285313C300D41C5A /* AppDelegate.swift in Sources */,
 				5DE73F9A2853150A00D41C5A /* ApiService.swift in Sources */,
@@ -475,7 +484,6 @@
 				5DE73FA92853162D00D41C5A /* ProductListVC.swift in Sources */,
 				5DE73F8E285314E400D41C5A /* Helper+Ext.swift in Sources */,
 				5DE73FA4285315E200D41C5A /* PorductCellViewModel.swift in Sources */,
-				5D107A0E2855989B0067874C /* filemanager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

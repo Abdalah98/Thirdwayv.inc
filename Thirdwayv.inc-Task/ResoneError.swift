@@ -16,6 +16,7 @@ enum ResoneError :String,Error{
     case invalidResponse         = "Invalid response from the server. Please try again."
     case invalidData             = "The data received from the server was invalid. Please try again."
     case notFound                = "not found page"
+    static let networkNOtificationCenterDataName = "connectionStateData"
     case persestentFileName      = "CachedDataFile.json"
     case cachedFilesDirectoryName = "cachedFiles"
    }

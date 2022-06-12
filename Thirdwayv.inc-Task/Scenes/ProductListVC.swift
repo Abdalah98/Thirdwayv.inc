@@ -40,18 +40,14 @@ class ProductListVC: UIViewController {
     }
     
     
-    /// Update User Interface if has connection or not has connection networking
-    /// - Parameter notification: notification center
-    @objc func statusManager(_ notification: Notification) {
-        viewModel.initFetchProductData()
-    }
-    
     /// activityView Hide
     //  activityView Hide when get data or found error
     fileprivate func stopActivity(){
         self.activity.stopAnimating()
         self.activity.hidesWhenStopped = true
     }
+    
+    
 }
 
 // MARK: - fetching data
@@ -68,8 +64,7 @@ extension ProductListVC {
         activity.fillSuperview()
         configureCollection()
         
-        NotificationCenter.default.addObserver(self,selector: #selector(statusManager),name: .flagsChanged,object: nil)
-        
+       
     }
     
     

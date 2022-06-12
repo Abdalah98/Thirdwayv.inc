@@ -11,14 +11,13 @@
         <!--Product Details-->
         <scene sceneID="hDm-m5-PTE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wvh-Qz-kJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProductDetailsVC" id="bF8-ig-3th" customClass="ProductDetailsVC" customModule="Thirdwayv_inc_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s15-G5-DE8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-uc-AJM">
-                                <rect key="frame" x="8" y="44" width="398" height="810"/>
+                                <rect key="frame" x="8" y="60" width="398" height="614"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIa-M3-czK">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="403.5"/>
@@ -80,7 +79,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="VIa-M3-czK" firstAttribute="leading" secondItem="ggB-uc-AJM" secondAttribute="leading" id="39T-qG-8Hh"/>
-                                    <constraint firstAttribute="bottom" secondItem="VIa-M3-czK" secondAttribute="bottom" id="6hU-Yi-Pv1"/>
+                                    <constraint firstAttribute="bottom" secondItem="VIa-M3-czK" secondAttribute="bottom" constant="218.5" id="6hU-Yi-Pv1"/>
                                     <constraint firstAttribute="trailing" secondItem="VIa-M3-czK" secondAttribute="trailing" id="Cb2-ZW-HJ0"/>
                                     <constraint firstItem="VIa-M3-czK" firstAttribute="centerX" secondItem="ggB-uc-AJM" secondAttribute="centerX" id="s4B-4J-XUb"/>
                                     <constraint firstItem="VIa-M3-czK" firstAttribute="top" secondItem="ggB-uc-AJM" secondAttribute="top" id="uHk-Y6-7C2"/>
@@ -97,8 +96,8 @@
                         <constraints>
                             <constraint firstItem="N08-4g-vCD" firstAttribute="trailing" secondItem="ggB-uc-AJM" secondAttribute="trailing" constant="8" id="Bd0-5j-oFg"/>
                             <constraint firstItem="ggB-uc-AJM" firstAttribute="leading" secondItem="N08-4g-vCD" secondAttribute="leading" constant="8" id="NaN-p2-7eg"/>
-                            <constraint firstItem="ggB-uc-AJM" firstAttribute="top" secondItem="N08-4g-vCD" secondAttribute="top" id="UFa-7Z-MHt"/>
-                            <constraint firstItem="N08-4g-vCD" firstAttribute="bottom" secondItem="ggB-uc-AJM" secondAttribute="bottom" constant="8" id="pEm-tx-VGe"/>
+                            <constraint firstItem="ggB-uc-AJM" firstAttribute="top" secondItem="N08-4g-vCD" secondAttribute="top" constant="16" id="UFa-7Z-MHt"/>
+                            <constraint firstItem="N08-4g-vCD" firstAttribute="bottom" secondItem="ggB-uc-AJM" secondAttribute="bottom" constant="188" id="pEm-tx-VGe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Product Details" id="ujL-4Q-EsN">
@@ -110,6 +109,7 @@
                         <outlet property="productPriceLabel" destination="gzK-HI-H1g" id="FLM-sm-nND"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvh-Qz-kJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.4057971014495" y="64.955357142857139"/>
         </scene>
