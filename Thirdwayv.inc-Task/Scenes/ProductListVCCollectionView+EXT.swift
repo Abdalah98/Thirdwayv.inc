@@ -11,6 +11,7 @@ import UIKit
 //MARK: - CollectionViewDataSource
 
 extension ProductListVC :UICollectionViewDataSource {
+    
     /// configure nib CollectionView
     func configureCollection(){
         if let layout = productListCollectionView.collectionViewLayout as? PinterestLayout {
@@ -19,6 +20,7 @@ extension ProductListVC :UICollectionViewDataSource {
         let nib = UINib(nibName: Cell.productCell, bundle: nil)
         productListCollectionView.register(nib, forCellWithReuseIdentifier: Cell.productCell)
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfCell
@@ -29,6 +31,7 @@ extension ProductListVC :UICollectionViewDataSource {
 //MARK: - CollectionViewDelegate
 
 extension ProductListVC : UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.productCell , for: indexPath) as? ProductCell else{
             fatalError("Not found cell identifier")
@@ -44,6 +47,7 @@ extension ProductListVC : UICollectionViewDelegate {
         self.viewModel.productDetails(at: indexPath)
         productDetailsPopUpVC()
     }
+    
     
     //MARK: - PopUpVC
     fileprivate func productDetailsPopUpVC() {

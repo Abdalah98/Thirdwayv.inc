@@ -19,5 +19,8 @@ enum ResoneError :String,Error{
     static let networkNOtificationCenterDataName = "connectionStateData"
     case persestentFileName      = "CachedDataFile.json"
     case cachedFilesDirectoryName = "cachedFiles"
+    
+    case unableToFetch = "There was an error Fetch  this new . please try again."
+    case alreadyInFetch = "You `ve already Fetch  this new. you must REALLY Like them!"
    }
 

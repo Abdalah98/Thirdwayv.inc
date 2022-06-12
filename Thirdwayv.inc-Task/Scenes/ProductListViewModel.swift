@@ -105,7 +105,7 @@ class ProductListViewModel  {
     }
     
     
-    //MARK: - number of row
+    //MARK: - fetch data and append in cell
     
     /// call each cell and return data by indexPath item
     /// - Parameter indexPath: indexPath item

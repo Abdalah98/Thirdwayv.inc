@@ -133,6 +133,15 @@
 			name = ProductFileManager;
 			sourceTree = "<group>";
 		};
+		5D83451728568ACD007F8B63 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				5D65EFDE2855C92A0064E047 /* ProductFileManager */,
+				5DE73F88285314AA00D41C5A /* ApiSevice */,
+			);
+			name = Mangers;
+			sourceTree = "<group>";
+		};
 		5DC60C3C2854424600EABDB2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +173,8 @@
 		5DE73F49285313C300D41C5A /* Thirdwayv.inc-Task */ = {
 			isa = PBXGroup;
 			children = (
-				5D65EFDE2855C92A0064E047 /* ProductFileManager */,
 				5DE73F7D2853141300D41C5A /* Delegate */,
-				5DE73F88285314AA00D41C5A /* ApiSevice */,
+				5D83451728568ACD007F8B63 /* Mangers */,
 				5DE73F9C2853155B00D41C5A /* Scenes */,
 				5DC60C3C2854424600EABDB2 /* Layouts */,
 				5DE73F8B285314CA00D41C5A /* Extension */,
