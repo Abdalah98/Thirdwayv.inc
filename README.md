@@ -26,21 +26,22 @@ Therefore, it becomes possible to write a simpler test for the presentational lo
 ### Features
 
 
-     •     Project Organization & Architecture
+    •     Project Organization & Architecture
     •     MVVM With Dependency Injection
     •     Support Dark Mode & light mode 
     •     Downloading & Caching images and data
     •     Custom Animations
     •     scrolled infinitely to load more products 
-        •        Generated Documentation file using HeaderDoc, markdown&jazzy
+    •     Generated Documentation file using HeaderDoc
     •     Asynchronous Data Fetch
-        •        check the internet connection and refresh the app 
+    •     check the internet connection and refresh the app 
     •     Planning our Network Calls - API, JSON, Model
-        •        Generics Networking(Custom Response)
-        •           Animations
-        •     UnitTesting API by mock
-        •        Cached locally and show when no have internet
-        •        and many tools used
+    •     Generics Networking(Custom Response)
+    •     Animations PopUp
+    •     UnitTesting API by mock
+    •     Cached locally and show when no have internet
+    •     No third-party libraries
+    •     and many tools used
 
 #### UI
 ## video demo
